@@ -14,31 +14,31 @@ export class ModuleComponent implements OnInit {
       bg:'#231F26',
       name:'Digital Production',
       tutor:'SAJ',
-      image:'../assets/prog.png'
+      image:'./assets/prog.png'
     },
     {
       bg:'#0A2F3C',
       name:'Security',
       tutor:'SAM',
-      image:'../assets/cyb.png'
+      image:'./assets/cyb.png'
     },
     {
       bg:'#121821',
       name:'Business Environments',
       tutor:'LIAM',
-      image:'../assets/bse.png'
+      image:'./assets/bse.png'
     },
     {
       bg:'#232432',
       name:'Data in Computing',
       tutor:'Trevor',
-      image:'../assets/data.png'
+      image:'./assets/data.png'
     },
     {
       bg:'#675052',
       name:'Legislation',
       tutor:'SAJ',
-      image:'../assets/legi.png'
+      image:'./assets/legi.png'
     }
   ];
   currentDisplay:any = this.modules[this.currentIndex];

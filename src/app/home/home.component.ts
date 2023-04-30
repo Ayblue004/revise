@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { RefreshService } from '../refresh.service';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class HomeComponent implements OnInit {
   admin:boolean = false;
   constructor(
     private router: Router,
-    private auth: AngularFireAuth
+    private auth: AngularFireAuth,
+    private refresh: RefreshService
   ){}
 
   ngOnInit(): void {
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
 
   route(){
     this.router.navigate(['modules'])
+    this.refresh.toggle()
   }
 
   toggleAdmin(){
