@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="top">
+        <button *ngIf="!admin" (click)="toggleAdmin()">Admin</button>
+        <button *ngIf="admin" (click)="toggleAdmin()">Home</button>
+    </div>
+    <div class="flex-contain" *ngIf="!admin">
+        <h1>Welcome back...</h1>
+        <button (click)="route()">Start Revision</button>
+    </div>
+    <div class="form-contain" *ngIf="admin">
+        <div class="form">
+            <div class="form-wrap">
+                <label for="email" type="email">Email:</label>
+                <input name="Email" type="email" [(ngModel)]="email">
+                <label for="password">Password:</label>
+                <input name="password" type="password" [(ngModel)]="password">
+                <button (click)="onSubmit()" [disabled]="password.length == 0">Sign in</button>
+            </div>
+        </div>
+    </div>
+</div>

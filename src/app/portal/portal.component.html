@@ -1,0 +1,15 @@
+<div class="container" [ngStyle]="{'background-color': bgColour}">
+    <button (click)="home()">Back</button>
+    <div class="flex-contain">
+        <div class="child1">
+            <div class="block-contain">
+                <div *ngFor="let x of category" class="block" (click)="select(x)">
+                    {{x}}
+                </div>
+            </div>
+        </div>
+        <div class="child2" [ngStyle]="{'background-image': 'url(' + bgImage + ')'}">
+            <h1>Select a Category</h1>
+        </div>
+    </div>
+</div>

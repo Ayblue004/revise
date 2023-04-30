@@ -1,0 +1,21 @@
+<div class="container" [ngStyle]="{'background-color':currentDisplay.bg}">
+    <div class="display-modules">
+       <div class="module" [ngStyle]="{'background-color':currentDisplay.bg}">
+          <div class="nav">
+            <button class="nav-button" (click)="route('')">HOME</button>
+            <button class="nav-button sec" (click)="route('contribute')">Contribute</button>
+          </div>
+          <div class="flex-contain">
+            <div class="content">
+                <div class="col1">
+                  <h1 class="module-name">{{currentDisplay.name}}({{currentDisplay.tutor}})</h1>
+                  <button class="revise" (click)="portal()">Revise</button>
+                </div>
+            </div>
+            <div class="col2" (click)="change()">
+              <img [src]="currentDisplay.image" alt="robot">
+            </div>
+          </div>
+       </div>
+    </div>
+  </div>

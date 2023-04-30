@@ -1,0 +1,88 @@
+::placeholder{
+    font-family: var(--font-family);
+}
+
+@mixin btn{
+    font-family: 'Play', sans-serif;
+    background-color: var(--sec-color);
+    font-size: min(1.5vw,1.5em);
+    padding: 1vh min(2rem,2vw);
+    border: 2px solid var(--sec-color);
+    color: var(--primary-color);
+    font-family: 'Play', sans-serif;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+@mixin txtarea($height){
+    resize: none;
+    height: $height;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.container{
+    height: 100vh;
+    background-image: url('../../assets/home.png');
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    color: var(--primary-color);
+    .nav{
+        padding-left: 1rem;
+        button{
+            @include btn();
+        }
+    }
+    .flex{
+        display: flex;
+        height: 90vh;
+        max-width: 2000px;
+        margin: 0 auto;
+        .child1{
+            width: 50%;
+            padding: 1rem;
+            .contain{
+                display: flex;
+                flex-direction: column;
+                .txt1{
+                    @include txtarea(20vh)
+                }
+                .txt2{
+                    @include txtarea(45vh)
+                }
+                select{
+                    height: 5vh;
+                    margin-bottom: 1rem;
+                    option{
+
+                    }
+                }
+            }
+        }
+        .child2{
+            width: 50%;
+            padding: 1rem;
+            .suggestion{
+                height: 70vh;
+                overflow-y: scroll;
+                width: 80%;
+                background-color: var(--primary-color);
+                border-radius: 1.5rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                .child{
+                    color: black;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+            .submit{
+                @include btn();
+                background-color: green;
+                border: 2px solid green;
+            }
+        }
+    }
+}

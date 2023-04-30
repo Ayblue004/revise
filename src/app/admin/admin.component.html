@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="nav">
+        <button (click)="home()">Home</button>
+    </div>
+    <div class="flex">
+        <div class="child1">
+            <div class="scroll">
+                <div class="block" *ngFor="let x of questions">
+                    <p (click)="reviewQuestion(x)" (click)="openReview()">{{x.question}}</p>
+                    <div class="btn-contain">
+                        <button class="btn" (click)="approve(x)">Approve</button>
+                        <button class="btn sec" (click)="del(x)">Delete</button>
+                    </div>
+                </div>
+                <h1 class="none" *ngIf="questions.length < 1">
+                    "Nun" to approve !
+                </h1>
+            </div>
+        </div>
+        <div class="child2" *ngIf="!review">
+            <h1 *ngIf="questions.length > 0">Click question to review fully</h1>
+        </div>
+        <div class="child3" *ngIf="review">
+            <h1 (click)="closeReview()">Close</h1>
+            <div class="contain">
+                <p class="tag">Question:</p>
+                <div class="txtarea">
+                    {{revQuestion.question}}
+                </div>
+                <p class="tag">Answer:</p>
+                <div class="txtarea">
+                    {{revQuestion.answer}}
+                </div>
+                <p class="tag">Module:</p>
+                <div class="txtarea">
+                    {{revQuestion.module}}
+                </div>
+                <p class="tag">Category:</p>
+                <div class="txtarea">
+                    {{revQuestion.category}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

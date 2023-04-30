@@ -1,0 +1,116 @@
+@mixin btn{
+    font-family: 'Play', sans-serif;
+    background-color: var(--sec-color);
+    font-size: min(1.5vw,1.5em);
+    padding: 1vh min(2rem,2vw);
+    border: 2px solid var(--sec-color);
+    color: var(--primary-color);
+    font-family: 'Play', sans-serif;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.container{ 
+    height: 100vh;
+    background-image: url('../../assets/home.png');
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    color: var(--primary-color);
+    .nav{
+        button{
+            @include btn();
+        }   
+    }
+    .flex{
+        display: flex;
+        align-items: center;
+        height: 90vh;
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 1rem;
+        .child1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50%;
+            .scroll{
+                height: 100%;
+                max-height: 85vh;
+                overflow-y: scroll;
+                .block{
+                    background-color: var(--sec-color);
+                    border-radius: 5px;
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    height: 20vh;
+                    max-height: 200px;
+                    margin: 2rem 0;
+                    overflow-x: scroll;
+                    p{
+                        cursor: pointer;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        height: 20%;
+                        max-width: 90%;
+                    }
+                    .btn-contain{
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 65%;
+                        margin-left: 35%;
+                        .btn{
+                            @include btn();
+                            background-color: green;
+                            border: 2px solid green;
+                        }
+                        .sec{
+                            background-color: red;
+                            border: 2px solid red;
+                        }
+                    }
+                }
+            }
+        }
+        .child2{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1{
+
+            }
+        }
+        .child3{
+            background-color: var(--primary-color);
+            border: 2px solid var(--sec-color);
+            padding: 1rem;
+            height: 100%;
+            width: 45%;
+            margin-left: 5%;
+            overflow-y: scroll;
+            h1{
+                color: red;
+                font-size: 1.2rem;
+                margin:0 0 10px 90%;
+                cursor: pointer;
+            }
+            .contain{
+                overflow-y: scroll;
+                max-height: 100%;
+                .tag{
+                    font-size: 1.5rem;
+                    color: var(--sec-color);
+                }
+                .txtarea{
+                    background-color: var(--sec-color);
+                    padding-bottom: 10%;
+                    max-height: 20vh;
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
+}

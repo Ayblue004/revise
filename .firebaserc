@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "revise-2227b": {
+      "hosting": {
+        "revise": [
+          "revise-2227b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "revise-2227b"
+  }
+}

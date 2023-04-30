@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="nav">
+        <button (click)="home()">Home</button>
+    </div>
+    <div class="flex">
+        <div class="child1"> 
+            <div class="contain">
+                <textarea [(ngModel)]="newQuestion.question" (change)="filterSuggest()" name="question" class="txt1" placeholder="Question(Do not contribute if question already exist)"></textarea>
+                <textarea [(ngModel)]="newQuestion.answer" class="txt2" placeholder="Answer"></textarea>
+                <select name="module" [(ngModel)]="newQuestion.module">
+                    <option value="Digital">Digital Production</option>
+                    <option value="Security">Security</option>
+                    <option value="Business">Business Environments</option>
+                    <option value="Data">Data in Computing</option>
+                    <option value="Legislation">Legislation</option>
+                </select>
+                <select name="key-word" [(ngModel)]="newQuestion.category">
+                    <option value="Describe">Describe</option>
+                    <option value="Evaluate">Evaluate</option>
+                    <option value="Explain">Explain</option>
+                    <option value="Identify">Identify</option>
+                    <option value="State">State</option>
+                    <option value="Develop">Develop</option>
+                </select>
+            </div>
+        </div>
+        <div class="child2">
+            <div class="suggestion">
+                <u class="child" *ngFor="let x of suggestion">{{x}}?</u>
+            </div>
+            <button class="submit" (click)="contribute()">Contribute</button>
+        </div>
+
+    </div>
+</div>

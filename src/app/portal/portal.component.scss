@@ -1,0 +1,57 @@
+@mixin child(){
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.container{
+    height: 100vh;
+    color: var(--primary-color);
+    padding: 2rem;
+    width: 100vw;
+    button{
+        background-color: var(--sec-color);
+        font-size: min(2.5vw,2.5em);
+        padding: 1vh min(2rem,2vw);
+        border: 2px solid var(--sec-color);
+        color: var(--primary-color);
+        font-family: 'Play', sans-serif;
+        border-radius: 5px;
+        margin-left: 2rem;
+    }
+    .flex-contain{
+        height: 90%;
+        display: flex;
+        justify-content: space-between;
+        .child1{
+                @include child();
+            .block-contain{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .block{
+                    background-color: var(--sec-color);
+                    text-align: center;
+                    padding: 1.5rem 2rem;
+                    border-radius: 10px;
+                    width: 40%;
+                    margin: 0.5rem 0;
+                    font-size: min(2vw,2em);
+                    cursor: pointer;
+                }
+            }
+        }
+        .child2{
+            @include child();
+            height: 85vh;
+            h1{
+
+            }
+        }
+    }
+}

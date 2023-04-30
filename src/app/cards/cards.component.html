@@ -1,0 +1,51 @@
+<div class="container" [ngStyle]="{'background-color': bgColour}">
+    <div class="top">
+        <button (click)="home()">Back</button>
+        <div class="top-contain">
+            <div class="contain" (click)="displaySec('hint')">
+                <p>Hint</p>
+                <img src="../../assets/bulb.svg">
+            </div>
+            <div class="contain" (click)="displaySec('search')">
+                <p>Search</p>
+                <img src="../../assets/search.svg">
+            </div>
+        </div> 
+    </div>
+    <div class="flex-contain">
+        <div class="child1">
+            <h1 *ngIf="question.length == 0">No questions for this module</h1>
+            <div class="block-contain">
+                <div class="question" *ngIf="!cardState">
+                    {{this.currentQuestion}}
+                </div>
+                <div class="answer" *ngIf="cardState">
+                    {{this.currentAnswer}}
+                </div>
+            </div>
+        </div>
+        <div class="child2" [ngStyle]="{'background-image': 'url(' + bgImage + ')'}">
+            <div class="child2-contain">
+                <div class="feedback sec-display" *ngIf="secondDisplay == 'feedback'">
+                    <h1 *ngIf="!cardState">{{module}}!</h1>
+                    <h1 *ngIf="cardState">Answer</h1>
+                </div>
+                <div class="hint sec-display" *ngIf="secondDisplay == 'hint'">
+                    <h1>
+                        {{hint}}
+                    </h1>
+                </div>
+                <div class="search sec-display" *ngIf="secondDisplay == 'search'">
+                    <p class="que" *ngFor="let x of question; index as i" (click)="skip(i)">{{x.question}}</p>
+                </div>
+                <div class="btn-contain" *ngIf="!cardState">
+                    <button class="btn" (click)="changeCardState()">Done</button>
+                    <button class="btn sec" (click)="changeCardState()">Skip</button>
+                </div>
+                <div class="btn-contain answer" *ngIf="cardState">
+                    <button class="btn" (click)="next()" (click)="changeCardState()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

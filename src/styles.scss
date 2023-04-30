@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+:root {
+  --primary-color: #fff;
+  --sec-color:#0D6994;
+  --font-family:'Play', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+  }
+  *, *:before, *:after {
+    
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+  *::-webkit-scrollbar{
+    display: none;
+  }
+  button{
+    cursor: pointer;
+  }
