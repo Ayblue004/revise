@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref":"ayblue004/github.io/revise",
             "outputPath": "dist/revise",
             "index": "src/index.html",
             "main": "src/main.ts",
