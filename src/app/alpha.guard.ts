@@ -2,15 +2,13 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { RefreshService } from './refresh.service';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlphaGuard implements CanActivate {
   constructor(
-    private refresh: RefreshService,
-    private router: Router
+    private refresh: RefreshService
   ){
   }
   canActivate(
@@ -20,7 +18,7 @@ export class AlphaGuard implements CanActivate {
       return true;
     }
     else{
-      this.router.navigate([''])
+      window.location.href = 'https://ayblue004.github.io/revise/';
       return false;
     }
   }
