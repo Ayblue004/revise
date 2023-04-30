@@ -10,11 +10,11 @@ import { AlphaGuard } from './alpha.guard';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
-  {path:'modules', component:ModuleComponent, canActivate:[AlphaGuard]},
-  {path:'portal/:class', component:PortalComponent, canActivate:[AlphaGuard]},
-  {path: 'cards/:module/:type', component:CardsComponent, canActivate:[AlphaGuard]},
+  {path:'modules', component:ModuleComponent},
+  {path:'portal/:class', component:PortalComponent},
+  {path: 'cards/:module/:type', component:CardsComponent},
   {path: 'admin', component:AdminComponent, canActivate:[AlphaGuard]},
-  {path: 'contribute', component:ContributeComponent, canActivate:[AlphaGuard]}
+  {path: 'contribute', component:ContributeComponent}
 ];
 
 @NgModule({

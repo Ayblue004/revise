@@ -18,7 +18,6 @@ export class AlphaGuard implements CanActivate {
       return true;
     }
     else{
-      window.location.href = 'https://ayblue004.github.io/revise/';
       return false;
     }
   }

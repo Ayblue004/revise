@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
 
   route(){
     this.router.navigate(['modules'])
-    this.refresh.toggle()
   }
 
   toggleAdmin(){
@@ -39,6 +38,7 @@ export class HomeComponent implements OnInit {
     .then(resp=>{
       console.log("User logged In")
       this.signIn()
+      this.refresh.toggle()
     })
     .catch(resp=>{
       alert("Wrong email or password")
