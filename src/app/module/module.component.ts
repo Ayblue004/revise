@@ -12,7 +12,7 @@ export class ModuleComponent implements OnInit {
   modules: Array<any>=[
     {
       bg:'#231F26',
-      name:'Digital Production',
+      name:'Digital',
       tutor:'SAJ',
       image:'./assets/prog.png'
     },
@@ -24,13 +24,13 @@ export class ModuleComponent implements OnInit {
     },
     {
       bg:'#121821',
-      name:'Business Environments',
+      name:'Business',
       tutor:'LIAM',
       image:'./assets/bse.png'
     },
     {
       bg:'#232432',
-      name:'Data in Computing',
+      name:'Data',
       tutor:'Trevor',
       image:'./assets/data.png'
     },
