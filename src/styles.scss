@@ -25,3 +25,8 @@ html {
   button{
     cursor: pointer;
   }
+  @media only screen and (max-width: 600px){
+    html{
+      display: none;
+    }
+  }

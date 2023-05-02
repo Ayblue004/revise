@@ -37,11 +37,12 @@ export class ContributeComponent implements OnInit {
 
   getAllQuestions(): Promise<Question[]>{
     const module = ['Business', 'Data', 'Digital', 'Legislation', 'Security']
-    const category = ['Describe', 'Evaluate', 'Identify', 'State', 'Develop']
+    const category = ['Describe', 'Evaluate', 'Identify', 'State', 'Develop','Explain']
     const db:any = []
     module.forEach(module=>{
       category.forEach(category=>{
         let collection= this.afs.collection(`/Approved/${module}/${category}`);
+        console.log(module, category)
         let data = collection.valueChanges()
         data.subscribe(resp=>{
           resp.forEach(resp=>{
