@@ -41,7 +41,7 @@ export class ContributeComponent implements OnInit {
     const db:any = []
     module.forEach(module=>{
       category.forEach(category=>{
-        let collection= this.afs.collection(`/Pending/${module}/${category}`);
+        let collection= this.afs.collection(`/Approved/${module}/${category}`);
         let data = collection.valueChanges()
         data.subscribe(resp=>{
           resp.forEach(resp=>{
