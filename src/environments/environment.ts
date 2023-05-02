@@ -21,7 +21,8 @@ export const environment = {
     storageBucket: "firestore-angular-highcharts.appspot.com",
     messagingSenderId: "669023523724",
     appId: "1:669023523724:web:43f04e6a2ce0a92c01fca9",
-    measurementId: "G-ZD6C3CEC85"
+    measurementId: "G-ZD6C3CEC85",
+    experimentalForceLongPolling: true
   }
 };
 
