@@ -31,27 +31,27 @@ export class PortalComponent implements OnInit {
     switch(module){
       case 'Digital Production':
         this.bgColour = '#231F26';
-        this.bgImage = '../assets/prog.png'
+        this.bgImage = './assets/prog.png'
         break;
       case 'Security':
         this.bgColour = '#0A2F3C';
-        this.bgImage = '../assets/cyb.png';
+        this.bgImage = './assets/cyb.png';
         break;
       case 'Business Environments':
         this.bgColour = '#121821';
-        this.bgImage = '../assets/bse.png';
+        this.bgImage = './assets/bse.png';
         break
       case 'Data in Computing':
         this.bgColour = '#232432';
-        this.bgImage = '../assets/data.png';
+        this.bgImage = './assets/data.png';
         break;
       case 'Legislation':
         this.bgColour = '#675052';
-        this.bgImage = '../assets/legi.png';
+        this.bgImage = './assets/legi.png';
         break;
       default:
         this.bgColour = '#231F26'
-        this.bgImage = '../assets/prog.png';
+        this.bgImage = './assets/prog.png';
     }
   }
 
