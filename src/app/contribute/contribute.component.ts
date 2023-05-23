@@ -42,7 +42,6 @@ export class ContributeComponent implements OnInit {
     module.forEach(module=>{
       category.forEach(category=>{
         let collection= this.afs.collection(`/Approved/${module}/${category}`);
-        console.log(module, category)
         let data = collection.valueChanges()
         data.subscribe(resp=>{
           resp.forEach(resp=>{
@@ -85,7 +84,6 @@ contribute(){
   this.afs.collection(`/Pending/${this.newQuestion.module}/${this.newQuestion.category}`)
   .doc(id).set(this.newQuestion)
   .then((resp)=>{
-    console.log(resp)
   })
   this.reset()
 }

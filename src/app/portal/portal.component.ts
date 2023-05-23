@@ -27,7 +27,6 @@ export class PortalComponent implements OnInit {
   }
 
   checkBg(module:string){
-    console.log(this.module)
     switch(module){
       case 'Digital Production':
         this.bgColour = '#231F26';

@@ -52,7 +52,6 @@ export class ModuleComponent implements OnInit {
     if(this.currentIndex < 4){
       this.currentIndex += 1
       this.currentDisplay = this.modules[this.currentIndex]
-      console.log(this.currentDisplay, this.currentIndex)
     }else if(this.currentIndex == 4){
       this.currentIndex = 0
       this.currentDisplay = this.modules[this.currentIndex]

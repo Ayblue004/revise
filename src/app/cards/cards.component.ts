@@ -35,10 +35,6 @@ export class CardsComponent implements OnInit {
    this.checkBg(this.module);
    this.checkHint(this.type);
    this.question = await this.getModuleQuestions()
-
-   setTimeout(()=>{
-    console.log(this.question)
-   },1000)
   }
 
   checkBg(module:string){
@@ -46,7 +42,6 @@ export class CardsComponent implements OnInit {
       case 'Digital':
         this.bgColour = '#231F26';
         this.bgImage = './assets/prog.png'
-        console.log('working')
         break;
       case 'Security':
         this.bgColour = '#0A2F3C';

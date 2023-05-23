@@ -39,8 +39,8 @@
                     <p class="que" *ngFor="let x of question; index as i" (click)="skip(i)">{{x.question}}</p>
                 </div>
                 <div class="btn-contain" *ngIf="!cardState">
-                    <button class="btn" (click)="changeCardState()">Done</button>
-                    <button class="btn sec" (click)="changeCardState()">Skip</button>
+                    <button class="btn" (click)="changeCardState()" [disabled]="question.length < 1">Done</button>
+                    <button class="btn sec" (click)="changeCardState()" [disabled]="question.length < 1">Skip</button>
                 </div>
                 <div class="btn-contain answer" *ngIf="cardState">
                     <button class="btn" (click)="next()" (click)="changeCardState()">Next</button>
